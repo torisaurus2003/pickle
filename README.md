@@ -47,7 +47,12 @@ cp ./examples/style.css ~/.config/pickle/
 # Run the executable
 ./pickle
 ```
-The program comes with its own built-in configuration and overrides it with any user configuration found in ```~/.config/pickle/config```. Without ```~/.config/pickle/style.css``` the program will use the global GTK theme.
+The program comes with its own built-in configuration and overrides it with any user configuration found in ```~/.config/pickle/config```. Without ```~/.config/pickle/style.css``` the program will use the global GTK theme. Custom paths for the configuration and style paths can be set through the command line using:
+
+```bash
+./pickle -c /path/to/config/file/
+./pickle -s /path/to/style/file/
+```
 
 ## Configuration Options
 - **icons=*str* (icon1,icon2,icon3,...)**  
@@ -81,8 +86,6 @@ Sets the window's namespace (requires set_as_layer=true). Default is "pickle".
 Sets the window's horizontal position in pixels (requires set_as_layer=true). Default is unset
 - **y_pos=*int***  
 Sets the window's vertical position in pixels (requires set_as_layer=true). Default is unset. If both x_pos and y_pos are unset, the window defaults to the center. The position increases from left to right and top to bottom
-
-
 
 ## Styling configuration
 
