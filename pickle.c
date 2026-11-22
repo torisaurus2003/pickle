@@ -1,6 +1,3 @@
-//Power menu application
-
-
 /*INCLUDES*/
 
 #include <gtk/gtk.h>		//For GTK stuff
@@ -556,7 +553,7 @@ static void create_window(App *app) {
 	else {
 
 		//If the user didn't set one, use the default path
-		config = g_build_filename(g_get_user_config_dir(), "optionizer-3000", "config", NULL);
+		config = g_build_filename(g_get_user_config_dir(), "pickle", "config", NULL);
 
 	}	
 
@@ -618,7 +615,7 @@ static void create_window(App *app) {
 	
 	}
 	else {
-		style = g_build_filename(g_get_user_config_dir(), "optionizer-3000", "style.css", NULL);
+		style = g_build_filename(g_get_user_config_dir(), "pickle", "style.css", NULL);
 	}
 	
 	//Create window
@@ -879,12 +876,12 @@ int main(int argc, char *argv[]) {
 	app.config.label_spacing = 10;
 	app.config.listbox_spacing = 0;
 	app.config.max_rows=4;
-	app.config.title = strdup("optionizer-3000");	
+	app.config.title = strdup("pickle");	
 	app.config.set_as_layer = true;
-	app.config.namespace = strdup("optionizer-3000");
+	app.config.namespace = strdup("pickle");
 
 	//Create application
-	app.application = gtk_application_new("com.torisaurus.optionizer-3000", G_APPLICATION_HANDLES_COMMAND_LINE | G_APPLICATION_NON_UNIQUE);
+	app.application = gtk_application_new("com.torisaurus.pickle", G_APPLICATION_HANDLES_COMMAND_LINE | G_APPLICATION_NON_UNIQUE);
 	
 	//Executable options
 	g_application_add_main_option(G_APPLICATION(app.application), "config", 'c', G_OPTION_FLAG_NONE, G_OPTION_ARG_STRING, "Path to configuration file", "FILE");

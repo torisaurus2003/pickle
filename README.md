@@ -1,15 +1,15 @@
-# Optionizer 3000
+# Pickle
 
 Got options? Want to execute them? This is for you.  
 
-Optionizer 3000 takes any options you have and lets you choose between them
+Pickle takes any options you have and lets you choose between them
 in a convenient presentation. Add labels, icons, commands and customize as much as you need.
 
 <p align="center">
     <img height="100" src="screenshots/main.png">
 </p>
 
-"Doesn't it look just like a power menu?" Well, it started as one. I was using wofi as my power menu, but the window size kept bugging out, so I made this as a replacement. You can gut it, replace the example options and add whatever you want. Optionizer 3000 just executes a command by selecting its respective label inside the window.
+"Doesn't it look just like a power menu?" Well, it started as one. I was using wofi as my power menu, but the window size kept bugging out, so I made this as a replacement. You can gut it, replace the example options and add whatever you want. Pickle just executes a command by selecting its respective label inside the window.
 
 ## Requirements
 
@@ -33,21 +33,21 @@ The built-in icons, labels and commands can be overridden in the [configuration 
 
 ```bash
 # Clone the repository and compile
-git clone https://github.com/torisaurus2003/optionizer-3000.git
-cd optionizer-3000
+git clone https://github.com/torisaurus2003/pickle.git
+cd pickle
 make
 
 # Create the user configuration folder
-mkdir -p ~/.config/optionizer-3000/
+mkdir -p ~/.config/pickle/
 
 # Copy the configuration files to the user directory
-cp ./examples/config ~/.config/optionizer-3000/
-cp ./examples/style.css ~/.config/optionizer-3000/
+cp ./examples/config ~/.config/pickle/
+cp ./examples/style.css ~/.config/pickle/
 
 # Run the executable
-./optionizer-3000
+./pickle
 ```
-The program comes with its own built-in configuration and overrides it with any user configuration found in ```~/.config/optionizer-3000/config```. Without ```~/.config/optionizer-3000/style.css``` the program will use the global GTK theme.
+The program comes with its own built-in configuration and overrides it with any user configuration found in ```~/.config/pickle/config```. Without ```~/.config/pickle/style.css``` the program will use the global GTK theme.
 
 ## Configuration Options
 - **icons=*str* (icon1,icon2,icon3,...)**  
@@ -72,11 +72,11 @@ Sets the spacing between the listboxes (or columns) of the window in pixels. Def
 - **max_rows=*int***  
 Sets the maximum amount of rows per listbox (or columns). Default is 4.
 - **title=*str***  
-Sets the window title. Default is "optionizer-3000".
+Sets the window title. Default is "pickle".
 - **set_as_layer=*bool***  
 Sets the window's layer shell protocol. Default is true.
 - **namespace=*str***  
-Sets the window's namespace (requires set_as_layer=true). Default is "optionizer-3000".
+Sets the window's namespace (requires set_as_layer=true). Default is "pickle".
 - **x_pos=*int***  
 Sets the window's horizontal position in pixels (requires set_as_layer=true). Default is unset
 - **y_pos=*int***  
@@ -105,7 +105,7 @@ which makes it so the Symbols font overrides the icons in the main font, prevent
 
 ## Want it to do something else?
 
-Open ```~/.config/optionizer-3000/config``` and add a new item to the [labels list](examples/config#L2), along with its respective icon and command (if needed):
+Open ```~/.config/pickle/config``` and add a new item to the [labels list](examples/config#L2), along with its respective icon and command (if needed):
 
 ```c
 icons=,󰐥,󰌾,󰤄,
